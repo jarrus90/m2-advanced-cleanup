@@ -1,7 +1,8 @@
 {
   "name": "jarrus90/m2-advanced-cleanup",
   "description": "Module responsible for obsolete data cleanup.",
-  "license": "BSD 2-Clause License",
+  "homepage": "https://github.com/jarrus90/m2-advanced-cleanup",
+  "license": "BSD-2-Clause",
   "type": "magento2-module",
   "autoload": {
     "files": [
