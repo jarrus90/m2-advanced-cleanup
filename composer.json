@@ -1,0 +1,14 @@
+{
+  "name": "jarrus90/m2-advanced-cleanup",
+  "description": "Module responsible for obsolete data cleanup.",
+  "license": "BSD 2-Clause License",
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Jarrus90\\AdvancedCleanup\\": ""
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="advancedcleanup" translate="label" showInDefault="1" sortOrder="150">
+            <tab>advanced</tab>
+            <label>Advanced Cleanup</label>
+            <class>separator-top</class>
+            <resource>Magento_Config::advanced</resource>
+            <group id="report_event" translate="label" showInDefault="1" sortOrder="600">
+                <label>Logs in 'report_event' table</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1">
+                    <label>Cleanup enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="keep_days" translate="label" type="text" sortOrder="10" showInDefault="1">
+                    <label>Days Saved in Log</label>
+                    <validate>validate-zero-or-greater validate-digits</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="customer_visitor" translate="label" showInDefault="1" sortOrder="600">
+                <label>Logs in 'customer_visitor' table</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1">
+                    <label>Cleanup enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="keep_days" translate="label" type="text" sortOrder="10" showInDefault="1">
+                    <label>Days Saved in Log</label>
+                    <validate>validate-zero-or-greater validate-digits</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="report_viewed_product_index" translate="label" showInDefault="1" sortOrder="600">
+                <label>Logs in 'report_viewed_product_index' table</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1">
+                    <label>Cleanup enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="keep_days" translate="label" type="text" sortOrder="10" showInDefault="1">
+                    <label>Days Saved in Log</label>
+                    <validate>validate-zero-or-greater validate-digits</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="report_compared_product_index" translate="label" showInDefault="1" sortOrder="600">
+                <label>Logs in 'report_compared_product_index' table</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1">
+                    <label>cleanup enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="keep_days" translate="label" type="text" sortOrder="10" showInDefault="1">
+                    <label>Days Saved in Log</label>
+                    <validate>validate-zero-or-greater validate-digits</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

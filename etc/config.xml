@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <advancedcleanup>
+            <customer_visitor>
+                <enabled>0</enabled>
+                <keep_days>30</keep_days>
+            </customer_visitor>
+            <report_viewed_product_index>
+                <enabled>0</enabled>
+                <keep_days>30</keep_days>
+            </report_viewed_product_index>
+            <report_compared_product_index>
+                <enabled>0</enabled>
+                <keep_days>30</keep_days>
+            </report_compared_product_index>
+        </advancedcleanup>
+    </default>
+</config>
