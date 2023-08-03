@@ -15,6 +15,10 @@
                 <enabled>0</enabled>
                 <keep_days>30</keep_days>
             </report_compared_product_index>
+            <report_event>
+                <enabled>0</enabled>
+                <keep_days>30</keep_days>
+            </report_event>
         </advancedcleanup>
     </default>
 </config>
