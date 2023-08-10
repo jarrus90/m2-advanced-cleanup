@@ -72,14 +72,14 @@ class RemoveUnusedMediaCommand extends Command
         $mediaGalleryTable = $this->resourceConnection->getTableName('catalog_product_entity_media_gallery');
 
         $directoryIterator = new RecursiveDirectoryIterator($imageDir);
-        $imagesToKeep = $connection->fetchCol('SELECT value FROM ' . $mediaGalleryTable);
+        $imagesToKeep = array_flip($connection->fetchCol('SELECT value FROM ' . $mediaGalleryTable));
 
         foreach (new RecursiveIteratorIterator($directoryIterator) as $file) {
             if ($this->isInCachePath($file) || $this->isInPlaceholderPath($file) || $this->isInWatermarkPath($file) || is_dir($file)) {
                 continue;
             }
             $filePath = str_replace($imageDir, "", $file);
-            if (empty($filePath) || in_array($filePath, $imagesToKeep, true)) {
+            if (empty($filePath) || isset($imagesToKeep[$filePath])) {
                 continue;
             }
             $fileSize += filesize($file);
